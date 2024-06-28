@@ -6,7 +6,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 
 const HomeScreen = () => {
-  const { data: products, isLoading, error } = useGetProductsQuery()
+  const { data, isLoading, error } = useGetProductsQuery()
   return (
     <>
       {isLoading ? (
@@ -19,7 +19,7 @@ const HomeScreen = () => {
         <>
           <h1>Latest Products</h1>
           <Row>
-            {products.map((product) => (
+            {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={2} xl={2}>
                 <Product product={product} />
               </Col>

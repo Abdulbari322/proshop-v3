@@ -52,7 +52,7 @@ const Product = ({ product }) => {
                 as='h6'
                 style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}
               >
-                ${product.price}
+                ₹{product.price}
               </Card.Text>
               {/* Buy button */}
               <Button variant='primary' className='ml-auto'>
