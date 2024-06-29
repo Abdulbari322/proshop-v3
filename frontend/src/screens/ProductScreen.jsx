@@ -10,6 +10,7 @@ import {
 } from '../slices/productsApiSlice'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import { addToCart } from '../slices/cartSlice'
 import { toast } from 'react-toastify'
 
@@ -72,6 +73,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={5}>
               <Image src={product.image} alt={product.name} fluid />
